@@ -53,15 +53,35 @@
     <p>&copy; 2025 Universidad de Ixtlahuaca CUI</p>
   </footer>
 
-  <script src="script.js"></script>
+<section id="contacto">
+  <h3>Contáctanos</h3>
+
+  <form action="https://formsubmit.co/jossgame0909@gmail.com" method="POST">
+    <!-- Redirigir de nuevo a esta misma página con parámetro -->
+    <input type="hidden" name="_next" value="https://jk0909-5.github.io/Derecho-Ixtlahuaca/?gracias=true">
+
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="name" required><br><br>
+
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="message" rows="4" required></textarea><br><br>
+
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<!-- ✅ Script que muestra mensaje de gracias y recarga limpia -->
 <script>
-  // Detecta si en la URL está el parámetro ?gracias=true
   if (window.location.search.includes("gracias=true")) {
     alert("¡Gracias! Tu mensaje ha sido enviado correctamente.");
-    // Recarga la página sin el parámetro para que no aparezca de nuevo
+    // Quita el parámetro ?gracias=true de la URL para que no vuelva a aparecer
     window.history.replaceState(null, null, window.location.pathname);
   }
 </script>
+
 </body>
 </html>
 <section id="contacto">
