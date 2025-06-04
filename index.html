@@ -54,6 +54,14 @@
   </footer>
 
   <script src="script.js"></script>
+<script>
+  // Detecta si en la URL está el parámetro ?gracias=true
+  if (window.location.search.includes("gracias=true")) {
+    alert("¡Gracias! Tu mensaje ha sido enviado correctamente.");
+    // Recarga la página sin el parámetro para que no aparezca de nuevo
+    window.history.replaceState(null, null, window.location.pathname);
+  }
+</script>
 </body>
 </html>
 <section id="contacto">
